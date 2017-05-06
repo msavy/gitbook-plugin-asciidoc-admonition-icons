@@ -1,28 +1,32 @@
 var cheerio = require("cheerio")
     , $
-    , options = // map annotations to styles
+    , options =
         {
-            /* PLUGIN SETTINGS */
-            "showTypeInHeader": true,
+            // Plugin default settings
             "note": {
-                klazz: "icon-note",
-                title: "Note"
+                classes: "fa icon-note",
+                title: "Note",
+                content: "\uf05a" 
             },
             "tip": {
-                klazz: "icon-tip",
-                title: "Tip"
+                classes: "fa icon-tip",
+                title: "Tip",
+                content: "\uf0eb"
             },
             "important": {
-                klazz: "icon-important",
-                title: "Important"
+                classes: "fa icon-important",
+                title: "Important",
+                content: "\uf06a"
             },
             "caution": {
-                klazz: "icon-caution",
-                title: "Caution"
+                classes: "fa icon-caution",
+                title: "Caution",
+                content: "\uf06d"
             },
             "warning": {
-                klazz: "icon-warning",
-                title: "Warning"
+                classes: "fa icon-warning",
+                title: "Warning",
+                content: "\uf071"
             }
         }
     ;
@@ -38,7 +42,6 @@ module.exports = {
         // For all the hooks, this represent the current generator
         // This is called before the book is generated
         init: function () {
-            // console.log( "callouts init!" );
             if (this.options.pluginsConfig && this.options.pluginsConfig.admonitions) {
                 var admonitions = this.options.pluginsConfig.admonitions;
                 for (key in admonitions) {
@@ -62,11 +65,13 @@ module.exports = {
                 candidateClasses = $(this)[0].attribs.class.split(/\s+/);
                 // Find the admonition class
                 admonClass = candidateClasses.find(klazz => options[klazz]);
+                // Admonishment
+                admon = options[admonClass];
                 // Replacement we'll sub in.
                 iconElem = $("<div></div>")
-                    .addClass("fa")
-                    .addClass(options[admonClass].klazz)
-                    .attr("title", options[admonClass].title);
+                    .addClass(admon.classes)
+                    .attr("title", admon.title)
+                    .text(admon.content);
                 // Find and replace child element that we want to hold the icon (but currently just has text).
                 div = $this.find("div.title").first()
                     .replaceWith(iconElem);

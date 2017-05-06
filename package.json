@@ -1,19 +1,19 @@
 {
-  "name": "gitbook-plugin-admonitions-workaround",
-  "description": "Rewrites asciidoc admonition blocks to make font icons work again. Includes basic CSS.",
+  "name": "gitbook-plugin-asciidoc-admonition-icons",
+  "description": "Plugin for GitBook to provide icons for AsciiDoc admonition blocks.",
   "main": "index.js",
   "version": "1.0.0",
   "engines": {
     "gitbook": "3.*"
   },
-  "homepage": "https://github.com/msavy/gitbook-admonitions-workaround",
+  "homepage": "https://github.com/msavy/gitbook-plugin-asciidoc-admonition-icons",
   "repository": {
     "type": "git",
-    "url": "https://github.com/msavy/gitbook-admonitions-workaround.git"
+    "url": "https://github.com/msavy/gitbook-plugin-asciidoc-admonition-icons.git"
   },
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/msavy/gitbook-admonitions-workaround/issues"
+    "url": "https://github.com/msavy/gitbook-plugin-asciidoc-admonition-icons/issues"
   },
   "dependencies": {
     "cheerio": "^0.19.0"
@@ -24,5 +24,12 @@
   },
   "scripts": {
     "prepublish": "./build.sh"
-  }
+  },
+  "contributors": [
+    { 
+      "name": "Marc Savy",
+      "email": "marc@rhymewithgravy.com"
+    }
+  ],
+  "author": "Marc Savy <marc@rhymewithgravy.com>"
 }

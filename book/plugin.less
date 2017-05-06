@@ -1,8 +1,8 @@
 @section-divider-colour: fade(#939da3, 30);
-@admonition-tip-color: fade(#589, 80);
 @admonition-content-color: #777;
+@admonition-tip-color: #111;
 @admonition-note-color: #19407c;
-@admonition-warning-color: #bb5f18;
+@admonition-warning-color:#bb5f18;
 @admonition-caution-color: #bf0000;
 @admonition-important-color: #243446;
 
@@ -52,29 +52,24 @@
     cursor: default;
   }
 
-  .icon-note:before {
-    content: "\f05a";
+  .icon-note {
     color: @admonition-note-color;
   }
 
-  .icon-tip:before {
-    content: "\f069";
+  .icon-tip {
     text-shadow: 1px 1px 2px rgba(155, 155, 0, .8);
     color: @admonition-tip-color;
   }
 
-  .icon-warning:before {
-    content: "\f071";
+  .icon-warning {
     color: @admonition-warning-color;
   }
 
-  .icon-caution:before {
-    content: "\f06d";
+  .icon-caution {
     color: @admonition-caution-color;
   }
 
-  .icon-important:before {
-    content: "\f06a";
+  .icon-important {
     color: @admonition-important-color;
   }
 }

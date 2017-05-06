@@ -73,7 +73,7 @@ The entire set of defaults are shown here for illustrative purposes, but you nee
 }
 ```
 
-For example, to override the `TIP` admonition type, you could change alter the `content` field to be something else:
+For example, to override the `TIP` admonition type, you could alter the `content` field to be something else:
 
 ```json
 "pluginsConfig": {

@@ -19,6 +19,16 @@ Refer to the [Configuration](#configuration) section for more detail.
 
 ## Configuration
 
+### Installation
+
+In `book.json`, add `asciidoc-admonition-icons` to your `plugins` array:
+
+```json
+{
+    "plugins": ["asciidoc-admonition-icons"]
+}
+```
+
 ### Basic Configuration
 
 Override the default configuration in the `pluginsConfig.admonitions` section of `book.json`.

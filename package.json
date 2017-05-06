@@ -1,0 +1,28 @@
+{
+  "name": "gitbook-plugin-admonitions-workaround",
+  "description": "Rewrites asciidoc admonition blocks to make font icons work again. Includes basic CSS.",
+  "main": "index.js",
+  "version": "1.0.0",
+  "engines": {
+    "gitbook": "3.*"
+  },
+  "homepage": "https://github.com/msavy/gitbook-admonitions-workaround",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/msavy/gitbook-admonitions-workaround.git"
+  },
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/msavy/gitbook-admonitions-workaround/issues"
+  },
+  "dependencies": {
+    "cheerio": "^0.19.0"
+  },
+  "devDependencies": {
+    "less": "^2.7.2",
+    "less-plugin-clean-css": "^1.5.1"
+  },
+  "scripts": {
+    "prepublish": "./build.sh"
+  }
+}

@@ -1,0 +1,85 @@
+.markdown-section .admonitionblock table td,
+.markdown-section .admonitionblock table th {
+  border: 0;
+}
+.admonitionblock > table {
+  border-collapse: separate;
+  border: 0;
+  background: none;
+  width: 100%;
+  margin-top: 1.8em;
+  margin-bottom: 1.8em;
+}
+.admonitionblock > table td.icon {
+  text-align: center;
+  width: 80px;
+}
+.admonitionblock > table td.icon img {
+  max-width: none;
+}
+.admonitionblock > table td.icon .title {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.admonitionblock > table td.content {
+  padding-left: 1.125em;
+  padding-right: 1.5em;
+  border-left: 1px solid rgba(147, 157, 163, 0.3);
+  color: black;
+}
+.admonitionblock > table td.content > :last-child > :last-child {
+  margin-bottom: 0;
+}
+span.icon > .fa {
+  cursor: default;
+}
+.admonitionblock td.icon [class^="fa icon-"] {
+  font-size: 2.5em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  cursor: default;
+}
+.admonitionblock td.icon .icon-note:before {
+  content: "\f05a";
+  color: #19407c;
+}
+.admonitionblock td.icon .icon-tip:before {
+  content: "\f069";
+  text-shadow: 1px 1px 2px rgba(155, 155, 0, 0.8);
+  color: rgba(85, 136, 153, 0.8);
+}
+.admonitionblock td.icon .icon-warning:before {
+  content: "\f071";
+  color: #bb5f18;
+}
+.admonitionblock td.icon .icon-caution:before {
+  content: "\f06d";
+  color: #bf0000;
+}
+.admonitionblock td.icon .icon-important:before {
+  content: "\f06a";
+  color: #243446;
+}
+.conum[data-value] {
+  display: inline-block;
+  color: #fff !important;
+  text-align: center;
+  font-size: 0.75em;
+  width: 1.67em;
+  height: 1.67em;
+  line-height: 1.67em;
+  font-style: normal;
+  font-weight: bold;
+}
+.conum[data-value] * {
+  color: #fff !important;
+}
+.conum[data-value] b {
+  display: none;
+}
+.conum[data-value]:after {
+  content: attr(data-value);
+}
+pre .conum[data-value] {
+  position: relative;
+  top: -0.125em;
+}

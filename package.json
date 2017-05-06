@@ -2,7 +2,7 @@
   "name": "gitbook-plugin-asciidoc-admonition-icons",
   "description": "Plugin for GitBook to provide icons for AsciiDoc admonition blocks.",
   "main": "index.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "engines": {
     "gitbook": "3.*"
   },
@@ -26,7 +26,7 @@
     "prepublish": "./build.sh"
   },
   "contributors": [
-    { 
+    {
       "name": "Marc Savy",
       "email": "marc@rhymewithgravy.com"
     }

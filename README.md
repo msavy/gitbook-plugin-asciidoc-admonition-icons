@@ -2,19 +2,20 @@
 
 As of publishing, the GitBook AsciiDoc 3.x.x rendering pipeline does not support icons for admonition blocks, providing an inconspicuous, text-only representation:
 
-image
+![image](https://cloud.githubusercontent.com/assets/423513/25775568/fbde3670-329f-11e7-9e5a-a5a1e716be38.png)
 
 With this plugin, admonition blocks are altered to provide the missing icons:
 
-image
+![image](https://cloud.githubusercontent.com/assets/423513/25775581/46741c22-32a0-11e7-9279-7c7d5d27e280.png)
+
 
 The default styling provides a similar look-and-feel to the Asciidoctor's standard theme; with FontAwesome icons and a comparable colour scheme. Naturally, you can override both the glyphs and styling.
 
-Refer to the [Configuration](#Configuration) section for more detail.
+Refer to the [Configuration](#configuration) section for more detail.
 
 ## Examples
 
-images
+![image](https://cloud.githubusercontent.com/assets/423513/25775625/7a955812-32a1-11e7-9b24-89c05aafe083.png)
 
 ## Configuration
 
@@ -22,14 +23,14 @@ images
 
 Override the default configuration in the `pluginsConfig.admonitions` section of `book.json`.
 
-* The 5 standard AsciiDoc admonition types are available, with the following mutable attributes <sup>[[1]](#Footnotes)</sup>:
-** `classes`: CSS classes of the admonition icon container.
-** `title`: HTML title attribute of admonition icon container.
-** `content`: Unicode value of glyph to use.
+* The 5 standard AsciiDoc admonition types are available, with the following mutable attributes <sup>[[1]](#footnotes)</sup>:
+  * `classes`: CSS classes of the admonition icon container.
+  * `title`: HTML title attribute of admonition icon container.
+  * `content`: Unicode value of glyph to use.
 
 The entire set of defaults are shown here for illustrative purposes, but you need only provide those you're overriding:
 
-.Example book.json configuration
+**Example book.json configuration:**
 ```json
 "pluginsConfig": {
     "admonitions": {
@@ -87,7 +88,7 @@ You can [override the default CSS](https://help.gitbook.com/content/how-can-i-in
 1. Change the classes attribute(s) and provide your own style.
 2. Override or extend the existing CSS. You may need to use the `!important` property in some circumstances.
 
-.Example colour override in style/website.css
+**Example colour override in style/website.css:**
 ```css
 .icon-tip {
     color: rgb(243, 21, 243, 0.7) !important;

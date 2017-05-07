@@ -65,6 +65,10 @@ module.exports = {
                 candidateClasses = $(this)[0].attribs.class.split(/\s+/);
                 // Find the admonition class
                 admonClass = candidateClasses.find(klazz => options[klazz]);
+                // Skip if no relevant candidate found
+                if (admonClass === undefined) {
+                    return true;
+                }
                 // Admonishment
                 admon = options[admonClass];
                 // Replacement we'll sub in.
@@ -73,7 +77,7 @@ module.exports = {
                     .attr("title", admon.title)
                     .text(admon.content);
                 // Find and replace child element that we want to hold the icon (but currently just has text).
-                div = $this.find("div.title").first()
+                $this.find("div.title").first()
                     .replaceWith(iconElem);
                 // Replace by the transformed element
                 page.content = $.html();

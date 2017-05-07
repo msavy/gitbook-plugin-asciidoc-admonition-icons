@@ -93,7 +93,7 @@ Now, it will look something like:
 
 ### Overriding Style
 
-You can [override the default CSS](https://help.gitbook.com/content/how-can-i-include-css.html) in (at least) two ways:
+You can [override the default CSS](https://github.com/msavy/gitbook-plugin-asciidoc-admonition-icons/blob/master/book/plugin.less) in (at least) two ways:
 
 1. Change the classes attribute(s) and provide your own style.
 2. Override or extend the existing CSS. You may need to use the `!important` property in some circumstances.

@@ -42,11 +42,9 @@ module.exports = {
         // For all the hooks, this represent the current generator
         // This is called before the book is generated
         init: function () {
-            if (this.options.pluginsConfig && this.options.pluginsConfig.admonitions) {
-                var admonitions = this.options.pluginsConfig.admonitions;
-                for (key in admonitions) {
-                    options[key] = admonitions[key] === false ? undefined : admonitions[key];
-                }
+            var admonitions = this.config.get('pluginsConfig.admonitions') || {};
+            for (key in admonitions) {
+                options[key] = admonitions[key] === false ? undefined : admonitions[key];
             }
         },
 

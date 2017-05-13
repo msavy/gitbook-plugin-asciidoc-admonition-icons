@@ -1,7 +1,10 @@
-[![npm](https://img.shields.io/npm/v/gitbook-plugin-asciidoc-admonition-icons.svg)](https://github.com/msavy/gitbook-plugin-asciidoc-admonition-icons/) [![npm](https://img.shields.io/npm/dw/gitbook-plugin-asciidoc-admonition-icons.svg)](https://github.com/msavy/gitbook-plugin-asciidoc-admonition-icons/) [![GitHub contributors](https://img.shields.io/github/contributors/msavy/gitbook-plugin-asciidoc-admonition-icons.svg)](https://github.com/msavy/gitbook-plugin-asciidoc-admonition-icons/) 
 # GitBook Plugin: Provides font icons for AsciiDoc admonition blocks.
 
-* Stars, issues, PRs, etc, on [GitHub @ msavy/gitbook-plugin-asciidoc-admonition-icons](https://github.com/msavy/gitbook-plugin-asciidoc-admonition-icons).
+[![npm](https://img.shields.io/npm/v/gitbook-plugin-asciidoc-admonition-icons.svg)](https://github.com/msavy/gitbook-plugin-asciidoc-admonition-icons/) [![npm](https://img.shields.io/npm/dw/gitbook-plugin-asciidoc-admonition-icons.svg)](https://github.com/msavy/gitbook-plugin-asciidoc-admonition-icons/) [![GitHub contributors](https://img.shields.io/github/contributors/msavy/gitbook-plugin-asciidoc-admonition-icons.svg)](https://github.com/msavy/gitbook-plugin-asciidoc-admonition-icons/) 
+
+Stars, issues, PRs, etc, on [GitHub @ msavy/gitbook-plugin-asciidoc-admonition-icons](https://github.com/msavy/gitbook-plugin-asciidoc-admonition-icons).
+
+---
 
 As of publishing, the GitBook AsciiDoc 3.x.x rendering pipeline does not support icons for admonition blocks, providing an inconspicuous, text-only representation:
 

@@ -7,18 +7,18 @@
 @admonition-important-color: #bf0000;
 
 // Reset border styling.
-.markdown-section .admonitionblock table td, 
-.markdown-section .admonitionblock table th {
-  border: 0;
+.admonitionblock table td, 
+.admonitionblock table th {
+  border: 0 !important;
 }
 
 .admonitionblock > table {
-    border-collapse: separate;
-    border: 0;
-    background: none;
+    border-collapse: separate !important;
+    border: 0 !important;
+    background: 0 0;
     width: 100%;
-    margin-top: 1.8em;
-    margin-bottom: 1.8em;
+    margin-top: 1.8em !important;
+    margin-bottom: 1.8em !important;
 }
 
 .admonitionblock > table td.icon {
@@ -35,7 +35,7 @@
 .admonitionblock > table td.content {
     padding-left: 1.125em;
     padding-right: 1.5em;
-    border-left: 1px solid @section-divider-colour;
+    border-left: 1px solid @section-divider-colour !important;
     color: inherit;
 }
 .admonitionblock > table td.content >:last-child >:last-child {
@@ -47,7 +47,7 @@
 
 .admonitionblock td.icon {
   [class^="fa icon-"] {
-    font-size: 2.5em;
+    font-size: 2.5em !important;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
     cursor: default;
   }

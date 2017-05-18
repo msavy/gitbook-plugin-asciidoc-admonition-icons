@@ -52,33 +52,37 @@ module.exports = {
         // It can be used for modifying page content
         // It should return the new page
         page: function (page) {
-            var $this;
-
-            $ = cheerio.load(page.content);
-
-            // Find asciidoc admonition block.
-            $(".admonitionblock").each(function () {
-                $this = $(this);
-                // Look at classes, should include the admonition type along with other irrelevant stuff.
-                candidateClasses = $(this)[0].attribs.class.split(/\s+/);
-                // Find the admonition class
-                admonClass = candidateClasses.find(klazz => options[klazz]);
-                // Skip if no relevant candidate found
-                if (admonClass === undefined) {
+            var $this, $;
+            // For compatibility with older versions of GitBook we need to iterate through each section.
+            page.sections.forEach((section) => {
+                if (section == undefined || section.content == undefined) {
                     return true;
                 }
-                // Admonishment
-                admon = options[admonClass];
-                // Replacement we'll sub in.
-                iconElem = $("<div></div>")
-                    .addClass(admon.classes)
-                    .attr("title", admon.title)
-                    .text(admon.content);
-                // Find and replace child element that we want to hold the icon (but currently just has text).
-                $this.find("div.title").first()
-                    .replaceWith(iconElem);
-                // Replace by the transformed element
-                page.content = $.html();
+                $ = cheerio.load(section.content);
+                // Find asciidoc admonition block.
+                $(".admonitionblock").each(function () {
+                    $this = $(this);
+                    // Look at classes, should include the admonition type along with other irrelevant stuff.
+                    candidateClasses = $(this)[0].attribs.class.split(/\s+/);
+                    // Find the admonition class
+                    admonClass = candidateClasses.find(klazz => options[klazz]);
+                    // Skip if no relevant candidate found
+                    if (admonClass === undefined) {
+                        return true;
+	    	        }
+                    // Admonishment
+                    admon = options[admonClass];
+                    // Replacement we'll sub in.
+                    iconElem = $("<div></div>")
+                        .addClass(admon.classes)
+                        .attr("title", admon.title)
+                        .text(admon.content);
+                    // Find and replace child element that we want to hold the icon (but currently just has text).
+                    $this.find("div.title").first()
+                        .replaceWith(iconElem);
+                    // Replace by the transformed element
+                    section.content = $.html();
+                });
             });
 
             return page;
